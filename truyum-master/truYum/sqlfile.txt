@@ -1,0 +1,30 @@
+ create table menuitem (id BIGINT(20) NOT NULL ,
+ name VARCHAR(20) NULL DEFAULT NULL ,
+ price FLOAT NULL DEFAULT NULL ,
+ active TINYINT(1) NULL DEFAULT NULL ,
+ dateOfLaunch DATE NULL DEFAULT NULL ,
+ category VARCHAR(20) NULL DEFAULT NULL ,
+ freeDilevry TINYINT(1) NULL DEFAULT NULL ,
+ PRIMARY KEY (id) );
+
+
+
+create table cart (userId BIGINT(20) NOT NULL ,
+ menuId BIGINT(20) NOT NULL,
+ PRIMARY KEY (userId, menuId));
+
+
+insert into menuitem values(1,'Sandwich',99.00,1,"2017-03-15",'Main Course',1);
+
+insert into menuitem values(2,'Burger',129.00,1,"2017-12-23",'Main Course',0);
+
+insert into menuitem values(3,'Pizza',149.00,1,"2017-08-21",'Main Course',0);
+
+insert into menuitem values(4,'French Fries',57.00,0,"2017-07-02",'Starters',1);
+
+insert into menuitem values(5,'Choclate Brownie',32.00,1,"2022-01-02",'Desert',1);
+
+
+
+ 
+ 
